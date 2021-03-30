@@ -1,0 +1,82 @@
+@charset "utf-8";
+.js .anim {
+    transition: opacity 0;
+    opacity: 0;
+}
+
+.js .anim-init.sliderigth {
+    animation: slideRigth 1s ease forwards;
+}
+
+.js .anim-init.slideup {
+    animation: slideUp 1s ease forwards;
+}
+
+.js .anim-init.fade {
+    animation: fade 0.5s ease forwards;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideRigth {
+    from {
+        opacity: 0;
+        transform: translateX(-20%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes hamburguerRigth {
+    from {
+        width: 0;
+        overflow-x: hidden;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes popup {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    70% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

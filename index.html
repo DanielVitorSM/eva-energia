@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="EVA Energia é uma empresa sustentável que ajuda na economia de energia empresarial">
+    <meta name="keywords" content="energia, consumo, sustentavel, renovavel">
+    <meta name="robots" content="index, follow">
+    <title>Energia Sustentável - EVA Energia</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/home.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Font Raleway-->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap" rel="stylesheet" />
+
+    <!-- Fonts Awesome Icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <!-- Menu -->
+    <nav class="navbar">
+        <svg class="logo" viewBox="0 0 554 195" xmlns="http://www.w3.org/2000/svg" height="120%">
+                <path
+                    d="M105.914 60.1066C112.891 60.1066 119.853 59.4127 126.69
+          58.0295C131.845 83.7604 148.513 105.71 171.916
+          117.59C195.313 129.471
+          222.87 129.969 246.686 118.945C268.24 178.315 333.841
+          208.968 393.211
+          187.415C452.58 165.862 483.234 100.256 461.68
+          40.8911C513.687 39.2471
+          554.768 -3.7991 553.99 -55.8244C553.208 -107.854 510.851
+          -149.643
+          458.816 -149.727H105.914C47.9742 -149.727 0.997314 -102.755
+          0.997314
+          -44.8102C0.997314 13.1344 47.9742 60.1066 105.914 60.1066Z"
+                    fill="white"
+                />
+                <image href="assets/images/logo.png" x="50%" width="30%" />
+            </svg>
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <menu>
+            <div class="close close-menu"><span>&times;</span></div>
+            <a class="menu-item close-menu" href="#comofunciona">Como funciona</a>
+            <a class="menu-item close-menu" href="#vantagens">Vantagens & Sustentabilidade</a>
+            <a class="menu-item close-menu" href="#calculareconomia">Calcule sua economia</a>
+            <a class="menu-item close-menu" href="#faq">FAQ</a>
+            <a class="button dark-button close-menu" href="#solicitarproposta">Quero uma proposta</a>
+        </menu>
+    </nav>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="calltoaction">
+            <h1 class="title title-large title-light">
+                Economize na sua conta de luz e ajude o planeta sem investir nada
+            </h1>
+            <div class="flex flex-wrap flex-center">
+                <a onclick="openModal()" href="#" class="button dark-button">Quero saber mais</a>
+                <a href="#calculareconomia" class="button text-button">Calcular desconto</a>
+            </div>
+        </div>
+        <div class="image-background">
+            <div class="blue-background"></div>
+            <img class="cloud" src="assets/images/clouds.svg" />
+            <img class="man" src="assets/images/man-and-world.svg" />
+        </div>
+    </header>
+
+    <!-- Como Funciona -->
+    <section id="comofunciona" class="comofunciona">
+        <img class="ilustra-flower" src="assets/images/icon-flower.svg">
+        <div class="container">
+            <div class="titulo">
+                <h4 class="title title-small title-bold">COMO FUNCIONA</h4>
+                <h2 class="title title-light">
+                    Veja tudo o que você precisa saber para tomar a decisão mais fácil da sua vida para sua empresa
+                </h2>
+            </div>
+            <div class="video">
+                <img class="clouds anim fade" src="assets/images/small-clouds.svg" />
+                <video preload="auto" width="1280" height="720" src="" style="background-color: white;"></video>
+            </div>
+        </div>
+        <img class="ilustra-fram" src="assets/images/caminhao.svg" />
+    </section>
+
+    <!-- Calcular Economia -->
+    <section id="calculareconomia" class="sessao-calc">
+        <div class="container anim fade">
+            <h4 class="title title-small title-bold">CALCULE A SUA ECONOMIA</h4>
+            <h2 class="title title-light">
+                Preencha os dados e descubra o quanto sua empresa consegue economizar
+            </h2>
+            <form id="calc" method="POST" class="calc-form form">
+                <div class="row-group">
+                    <div class="input-group-label">
+                        <label class="label">Ultima Conta (R$)</label>
+                        <input required name="last-account" step="0.01" class="input-normal money" autocomplete="false" type="number" />
+                    </div>
+                    <div class="input-group-label">
+                        <label class="label">nome</label>
+                        <input required name="name" class="input-normal" autocomplete="false" type="text" />
+                    </div>
+                    <div class="input-group-label">
+                        <label class="label">Email</label>
+                        <input required name="email" class="input-normal" autocomplete="false" type="email" />
+                    </div>
+                    <div class="input-group-label">
+                        <label class="label">Telefone</label>
+                        <input required name="phone" class="input-normal phone" autocomplete="false" type="text" />
+                    </div>
+                </div>
+                <button class="button dark-button">Calcular desconto</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Vantagens -->
+    <section id="vantagens" class="section-ask">
+        <div class="container">
+            <h4 class="title title-small title-light">BOM PARA TODO MUNDO</h4>
+            <h3 class="title title-bold">Vantagens & Sustentabilidade</h3>
+            <div class="cards">
+                <div class="card anim sliderigth">
+                    <p class="card-label">Consume energia limpa e renovável</p>
+                    <img class="ilustra" src="assets/images/ilustra-card1-consuma-1.svg" />
+                </div>
+                <div class="card anim sliderigth">
+                    <p class="card-label">Não precisa fazer obra e nenhum tipo de instalação</p>
+                    <img class="ilustra" src="assets/images/ilustra-card2-economize-1.svg" />
+                </div>
+                <div class="card anim sliderigth">
+                    <p class="card-label">Você faz a sua parte para cuidar do meio ambiente</p>
+                    <img class="ilustra" src="assets/images/ilustra-card3-não-precisa-1.svg" />
+                </div>
+                <div class="card anim sliderigth">
+                    <p class="card-label">Economize, pelo menos, 1 conta de luz ao ano</p>
+                    <img class="ilustra" src="assets/images/ilustra-card4-não-é-necessário-1.svg" />
+                </div>
+                <div class="card anim sliderigth">
+                    <p class="card-label">Não é necessário fazer nenhum tipo de investimento</p>
+                    <img class="ilustra" src="assets/images/ilustra-card5-você-faz-1.svg" />
+                </div>
+                <div class="card anim sliderigth">
+                    <p class="card-label">O desconto já começa no momento em que você assina o contrato</p>
+                    <img class="ilustra" src="assets/images/ilustra-card6-o-desconto-1.svg" />
+                </div>
+            </div>
+            <img class="bottom-city anim slideup" src="assets/images/ilustra-city.svg" />
+        </div>
+    </section>
+
+    <!-- Enviar Proposta -->
+    <section id="solicitarproposta" class="send-info">
+        <div class="container anim fade">
+            <h3 class="title title-bold">Solicite uma proposta</h3>
+            <form id="proposal" class="form" method="POST">
+                <div class="row-group">
+                    <div class="column-group">
+                        <div class="input-group-label">
+                            <label class="label">Nome</label>
+                            <input name="name" required class="input-normal" type="text" />
+                        </div>
+                        <div class="input-group-label">
+                            <label class="label">Email</label>
+                            <input name="email" required class="input-normal" type="email" />
+                        </div>
+                        <div class="input-group-label">
+                            <label class="label">Telefone</label>
+                            <input name="phone" required class="input-normal phone" type="text" />
+                        </div>
+                    </div>
+                    <div class="column-group">
+                        <div class="input-group-label">
+                            <label class="label">Empresa</label>
+                            <input name="company" required class="input-normal" type="text" />
+                        </div>
+                        <div class="input-group-label">
+                            <label class="label">Cargo</label>
+                            <input name="position" required class="input-normal" type="text" />
+                        </div>
+                        <div class="input-group-label">
+                            <label class="label">Cnpj</label>
+                            <input name="cnpj" required class="input-normal cnpj" type="text" />
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group-file">
+                    <label for="file-input" class="label">Envie a última conta de energia da sua empresa</label>
+                    <input name="account" required class="input-file" type="file" accept="image/*, .pdf" />
+                </div>
+                <button type="submit" class="button dark-button">ENVIAR INFORMAÇÕES</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Duvidas Frequentes -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h5 class="title title-dark title-left">Dúvidas Frequentes</h5>
+            <div class="collapse">
+                <button type="button" class="collapse-button">1- Existe algum pré requisito para contratar os serviços da Eva Energia?</button>
+                <div class="collapse-content">
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad minima reiciendis et laudantium? Vero, quo voluptatem, nostrum ratione mollitia quia perspiciatis quis rerum fuga magnam voluptas illo officiis omnis corporis.
+                    </p>
+                    <p></p>
+                </div>
+            </div>
+            <div class="collapse">
+                <button type="button" class="collapse-button">2- Quais são as áreas que vocês atuam?</button>
+                <div class="collapse-content">
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad minima reiciendis et laudantium? Vero, quo voluptatem, nostrum ratione mollitia quia perspiciatis quis rerum fuga magnam voluptas illo officiis omnis corporis.
+                    </p>
+                    <p></p>
+                </div>
+            </div>
+            <div class="collapse">
+                <button type="button" class="collapse-button">3- É preciso fazer alguma instalação especial?</button>
+                <div class="collapse-content">
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad minima reiciendis et laudantium? Vero, quo voluptatem, nostrum ratione mollitia quia perspiciatis quis rerum fuga magnam voluptas illo officiis omnis corporis.
+                    </p>
+                    <p></p>
+                </div>
+            </div>
+            <div class="collapse">
+                <button type="button" class="collapse-button">4- Existe algum investimento inicial na assinatura do contrato?</button>
+                <div class="collapse-content">
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad minima reiciendis et laudantium? Vero, quo voluptatem, nostrum ratione mollitia quia perspiciatis quis rerum fuga magnam voluptas illo officiis omnis corporis.
+                    </p>
+                    <p></p>
+                </div>
+            </div>
+            <div class="collapse">
+                <button type="button" class="collapse-button">5- Qual o tempo mínimo de contrato?</button>
+                <div class="collapse-content">
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad minima reiciendis et laudantium? Vero, quo voluptatem, nostrum ratione mollitia quia perspiciatis quis rerum fuga magnam voluptas illo officiis omnis corporis.
+                    </p>
+                    <p></p>
+                </div>
+            </div>
+            <div class="collapse">
+                <button type="button" class="collapse-button">6- Quem irá prover minha energia?</button>
+                <div class="collapse-content">
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad minima reiciendis et laudantium? Vero, quo voluptatem, nostrum ratione mollitia quia perspiciatis quis rerum fuga magnam voluptas illo officiis omnis corporis.
+                    </p>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <img class="ilustra-footer" src="assets/images/ilustra-footer.svg" />
+            <div class="footer">
+                <p class="rigths">&#xae; 2020 EVA ENERGIA - TODOS OS DIREITOS RESERVADOS</p>
+                <div class="social">
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- EVA Modal -->
+    <div class="modal">
+        <div class="modal-container container">
+            <div class="close"><span onclick="closeModal()">&times;</span></div>
+            <h1 class="title title-dark">Agora pense o que você poderia fazer com todo esse <b>dinheiro sobrando</b></h1>
+            <table class="table-eva">
+                <tr>
+                    <td class="hint" style="border-color: #E3E3E3">ECONOMIZAR</td>
+                    <td class="icon"><img src="assets/images/icon-coin.svg"></td>
+                    <td class="money">
+                        <span class="time">1 MÊS</span>
+                        <span class="amount">R$500.00</span>
+                    </td>
+                    <td class="desc" colspan="1" rowspan="4">
+                        <div class="desc">
+                            <span>E TEM MAIS</span>
+                            <span>Com a EVA energia além de economizar, você ainda ajuda a preservar 50 árvores.</span>
+                            <img src="assets/images/icon-trees.svg">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="hint" style="border-color: #A9E4CB;">CONTRATAR MAIS</td>
+                    <td class="icon"><img src="assets/images/icon-hire.svg"></td>
+                    <td class="money">
+                        <span class="time">1 ANO</span>
+                        <span class="amount">R$6.000,00</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="hint" style="border-color: #6ADBAB;">EXPANDIR O NEGÓCIO</td>
+                    <td class="icon"><img src="assets/images/icon-store.svg"></td>
+                    <td class="money">
+                        <span class="time">3 ANOS</span>
+                        <span class="amount">R$18.000,00</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="hint" style="border-color: #2AD18A;">AUMENTAR A PRESENÇA</td>
+                    <td class="icon"><img src="assets/images/icon-presence.svg"></td>
+                    <td class="money blue">
+                        <span class="time">5 ANOS</span>
+                        <span class="amount">R$30.000,00</span>
+                    </td>
+                </tr>
+                <tr class="foot-desc">
+                    <td colspan="4" rowspan="1">
+                        <div class="desc">
+                            <span>E TEM MAIS</span>
+                            <span>Com a EVA energia além de economizar, você ainda ajuda a preservar 50 árvores.</span>
+                            <img src="assets/images/icon-trees.svg">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <a href="#solicitarproposta" onclick="closeModal()" class="button dark-button">Solicitar uma proposta</a>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="assets/js/components.js"></script>
+<script src="assets/js/jquery.mask.js"></script>
+<script src="assets/js/jquery.validate.min.js"></script>
+<script>
+    var modal = 0;
+    $(".phone").mask("(00) 00000-0000");
+    $(".cnpj").mask("00.000.000/0000-00");
+
+    $("#calc").validate({
+        rules: {
+            "last-account": {
+                number: true,
+            },
+            name: {
+                minlength: 5,
+                maxlength: 100,
+            },
+            email: {
+                email: true,
+            },
+            phone: {
+                minlength: 15,
+            },
+        },
+        messages: {
+            "last-account": {
+                required: "Campo obrigatório",
+            },
+            name: {
+                required: "Campo obrigatório",
+                minlength: "Nome muito curto",
+                maxlength: "Nome muito longo",
+            },
+            email: {
+                required: "Campo obrigatório",
+                email: "Insira um email válido",
+            },
+            phone: {
+                required: "Campo obrigatório",
+                minlength: "Insira um telefone válido",
+            },
+        },
+    });
+
+    $("#proposal").validate({
+        rules: {
+            name: {
+                minlength: 5,
+                maxlength: 100,
+            },
+            email: {
+                email: true,
+            },
+            phone: {
+                minlength: 15,
+            },
+            cnpj: {
+                minlength: 18,
+            },
+        },
+        messages: {
+            name: {
+                required: "Campo obrigatório",
+            },
+            email: {
+                required: "Campo obrigatório",
+                minlength: "Nome muito curto",
+                maxlength: "Nome muito longo",
+            },
+            phone: {
+                required: "Campo obrigatório",
+                minlength: "Insira um telefone válido",
+            },
+            company: {
+                required: "Campo obrigatório",
+            },
+            position: {
+                required: "Campo obrigatório",
+            },
+            cnpj: {
+                required: "Campo obrigatório",
+                minlength: "Insira um CNPJ válido",
+            },
+            account: {
+                required: "Campo obrigatório",
+            },
+        },
+    });
+
+    function openModal() {
+        $(".modal").css("display", "flex")
+        $("body").toggleClass("no-scrol")
+    }
+
+    function closeModal() {
+        $(".modal").css("display", "none")
+        $("body").toggleClass("no-scrol")
+    }
+
+    $("#menu-bars, .close-menu").click(() => {
+        $("menu").toggleClass("show");
+    });
+</script>

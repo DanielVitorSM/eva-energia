@@ -1,0 +1,401 @@
+@charset "utf-8";
+@import "animations.css";
+
+/* Estilos Padrões */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    appearance: none;
+}
+
+
+/*Botão Preto Estilizado*/
+
+.button {
+    transition: box-shadow 300ms, text-shadow 300ms;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 0.8rem;
+    max-width: max-content;
+    cursor: pointer;
+}
+
+.button:hover {
+    text-shadow: 1px 1px 1rem white;
+}
+
+.dark-button {
+    background-color: black;
+    border-radius: 0 2rem 2rem 2rem;
+    margin: 0 auto;
+}
+
+.dark-button:hover {
+    box-shadow: 0 0 0.5rem black;
+}
+
+
+/*Nav Bar Responsiva*/
+
+.navbar {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+}
+
+.logo {
+    animation: popup 500ms forwards;
+}
+
+.navbar menu {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .menu-item {
+    transition: color 300ms;
+    color: #ccc;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.navbar .menu-item:hover {
+    color: #fff;
+}
+
+#menu-bars {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.close.close-menu {
+    display: none;
+    align-self: flex-end;
+    margin: 0 2rem;
+}
+
+.close.close-menu span {
+    color: white !important;
+    font-size: 4rem;
+}
+
+@media only screen and (max-width: 1250px) {
+    .navbar {
+        width: 98%;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .close.close-menu {
+        display: block;
+    }
+    .show {
+        visibility: visible !important;
+        animation: hamburguerRigth 1s forwards;
+    }
+    .navbar {
+        width: 80%;
+    }
+    .navbar menu {
+        position: fixed;
+        display: flex;
+        top: 0;
+        left: 0;
+        width: 400px;
+        height: 100%;
+        justify-content: flex-start;
+        flex-direction: column;
+        z-index: 9999;
+        background-color: black;
+        visibility: hidden;
+        white-space: nowrap;
+        word-break: keep-all;
+    }
+    .navbar menu a {
+        background-color: #000B;
+        width: 100%;
+        text-align: center;
+        border-radius: 0 !important;
+        font-size: 1rem;
+    }
+    #menu-bars {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+        width: 90%;
+    }
+    .navbar menu {
+        width: 80%;
+    }
+}
+
+
+/*Títulos e Labels*/
+
+.title {
+    font-family: Raleway;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 1rem auto;
+    text-align: center;
+    white-space: normal;
+    word-break: break-word;
+}
+
+.title-small {
+    font-size: 1rem;
+}
+
+.title-large {
+    font-size: 2.5rem;
+}
+
+.title-light {
+    font-weight: 300;
+}
+
+.title-bold {
+    font-weight: 700;
+}
+
+.title-dark {
+    color: black;
+}
+
+.title-left {
+    text-align: left;
+}
+
+.label {
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+/* Containers */
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-collumn {
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 98%;
+    }
+}
+
+
+/* Forms e Inputs*/
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.form .row-group {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 3rem 0;
+}
+
+.form .column-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form .input-group-label {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 1 0;
+    text-align: left;
+    margin: 10px;
+    justify-content: center;
+}
+
+.form .input-normal {
+    transition: box-shadow 200ms, border 200ms;
+    background-color: #FFF4;
+    padding: 1rem;
+    appearance: none;
+    border: 1px solid #FFF4;
+}
+
+.form .input-normal:focus,
+.form .input-normal:hover {
+    border: 1px solid #0001;
+    box-shadow: 0 0 0.5rem 0.05rem #0001;
+}
+
+.form .input-group-file {
+    display: flex;
+    flex: 1 1;
+    margin: 0 10px 2rem 10px;
+    font-size: 1rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem;
+    flex-wrap: wrap;
+    text-align: center;
+    border: 2px dashed white;
+    overflow-x: auto;
+}
+
+.form .input-file::-webkit-file-upload-button {
+    border: none;
+    border-radius: 0 1rem 1rem 1rem;
+    background-color: #0008;
+    color: white;
+    float: right;
+    margin: 0 10px;
+}
+
+.form .input-file {
+    display: flex;
+    color: #EEE;
+    font-size: 1rem;
+}
+
+.error {
+    color: #F00;
+    font-size: 0.9rem;
+    font-family: Raleway;
+    font-weight: 500;
+    margin-top: 2px;
+    box-shadow: none;
+    text-shadow: none !important;
+}
+
+@media only screen and (max-width: 1100px) {
+    .form .input-group-file {
+        justify-content: center;
+    }
+    .form .input-file {
+        flex: none;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .form .input-file {
+        width: 100%;
+    }
+}
+
+
+/* Collapse */
+
+.collapse {
+    width: 95%;
+    margin: auto;
+}
+
+.collapse-button {
+    color: #000;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    font-size: 1rem;
+    transition: background-color 300ms;
+    background-color: transparent;
+    word-break: break-word;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.collapse-content {
+    display: none;
+    overflow: hidden;
+    text-indent: 1rem;
+    margin: auto;
+    background-color: #0002;
+    border-radius: 0 0 2rem 2rem;
+    padding: 1rem;
+    word-break: break-word;
+}
+
+.collapse-button::after {
+    content: '\02795';
+    font-size: 1rem;
+    color: #000;
+    float: right;
+    margin-left: 5px;
+}
+
+.active .collapse-button:after {
+    content: "\2796" !important;
+}
+
+
+/* Auxiliares */
+
+.no-scrol {
+    overflow-y: hidden;
+}

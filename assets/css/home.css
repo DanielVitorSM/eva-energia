@@ -1,0 +1,441 @@
+@charset "utf-8";
+@import "components.css";
+@import "animations.css";
+:root {
+    --background-gradient: linear-gradient(to top, #2dacda, #2099c5, #127dac 80%);
+    --menu-item-color: #eee;
+    --green: #2AD18A;
+    --blue: #127dac;
+    --lightblue: #2dacda;
+    font-size: max(1em, 1vw);
+}
+
+body {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 500;
+    overflow-x: hidden;
+    position: relative;
+    background-color: #127dac;
+}
+
+header {
+    height: 90vh;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, #FF00, #2dacda 50%);
+}
+
+
+/*Imagem de fundo do homem segunrao uma lampada*/
+
+.image-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.image-background .cloud {
+    width: 100%;
+    z-index: -99;
+    height: 100%;
+    animation: slideUp ease-in-out 800ms forwards;
+}
+
+.image-background .man {
+    position: absolute;
+    bottom: -50%;
+    overflow: hidden;
+    z-index: -98;
+    height: 100vh;
+    animation: slideUp ease 2000ms forwards;
+}
+
+.image-background .blue-background {
+    background-color: #2dacda;
+    height: 100vh;
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+    z-index: -100;
+}
+
+@media only screen and (max-width: 600px) {
+    .image-background .man {
+        width: 140vw;
+        bottom: -40%;
+    }
+}
+
+
+/*Call to Action*/
+
+.calltoaction {
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50vh;
+    top: 10%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*Como Funciona*/
+
+.comofunciona {
+    position: relative;
+    z-index: 10;
+    height: max-content;
+    text-align: center;
+    background-color: #2dacda;
+    overflow: hidden;
+    padding-top: 100px;
+}
+
+.comofunciona .ilustra-flower {
+    position: absolute;
+    left: 20%;
+    top: 0;
+}
+
+.video {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+    position: relative;
+}
+
+.video .clouds {
+    position: absolute;
+    width: 20%;
+    top: -10%;
+    right: -10%;
+}
+
+.video video {
+    width: 100%;
+    height: 40vw;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1rem;
+}
+
+.comofunciona .ilustra-fram {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+
+@media only screen and (max-width: 1000px) {
+    .video video {
+        height: 50vw;
+    }
+}
+
+
+/*Sessao Calc*/
+
+.sessao-calc {
+    z-index: 10;
+    background-color: #2AD18A;
+    height: max-content;
+    position: relative;
+    text-align: center;
+    overflow-x: hidden;
+    padding: 4rem 0;
+}
+
+
+/*Sessao Ask*/
+
+.section-ask {
+    background-color: #F99F1D;
+    height: max-content;
+    padding: 4vw 0 0 0;
+    z-index: -10;
+    position: relative;
+}
+
+.cards {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #FFF3;
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 30%;
+    border-radius: 0 2rem 2rem 2rem;
+    margin: 2%;
+}
+
+.card .ilustra,
+.card .card-label {
+    width: 50%;
+    color: white;
+    text-align: center;
+    margin: auto;
+    font-size: 1rem;
+}
+
+.section-ask .bottom-city {
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    z-index: -999;
+}
+
+@media only screen and (max-width: 600px) {
+    .cards {
+        width: 98%;
+        flex-direction: column;
+    }
+    .section-ask .bottom-city {
+        width: 80%;
+    }
+}
+
+
+/* Info */
+
+.send-info {
+    background-color: var(--green);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 0;
+    z-index: 10;
+}
+
+
+/* FAQ */
+
+.faq {
+    background-color: white;
+    color: black;
+    padding: 4rem 0;
+    text-align: left!important;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: white;
+    padding: 2rem 0;
+}
+
+footer .ilustra-footer {
+    width: 100%;
+    height: auto;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    height: 100%;
+}
+
+.footer .rigths {
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer .social {
+    display: flex;
+    font-size: 1rem;
+}
+
+.footer .social a {
+    background-color: #0002;
+    border-radius: 100%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0.1rem;
+    color: black;
+}
+
+
+/* Modal */
+
+.modal {
+    display: none;
+    background-color: #0008;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    animation: fade 0.3s forwards;
+}
+
+.modal-container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.table-eva {
+    height: max-content;
+    width: 60%;
+    margin: 1rem auto;
+    font-size: 1rem;
+}
+
+.table-eva .hint {
+    width: 100%;
+    font-size: 0.8rem;
+    text-align: left;
+    border-radius: 1rem 5rem 5rem 1rem;
+    border-width: 2px;
+    border-style: solid;
+    padding: 0 0.5rem;
+}
+
+.table-eva .icon img {
+    margin: auto;
+    height: 100%;
+}
+
+.table-eva .money {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 1rem 1rem 1rem 0;
+    color: #000;
+}
+
+.table-eva .money.blue {
+    background-color: var(--lightblue);
+    color: white !important;
+}
+
+.table-eva .money .time {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.table-eva .money .amount {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.table-eva .desc div,
+.table-eva .foot-desc div {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--green);
+    border-radius: 1rem 1rem 1rem 0;
+    text-align: center;
+    color: white;
+    padding: 1rem 1rem 0 1rem;
+    font-size: 1rem;
+}
+
+.table-eva .foot-desc div {
+    display: none;
+    height: max-content;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--green);
+    border-radius: 1rem 1rem 1rem 0;
+    text-align: center;
+    color: white;
+    padding: 1rem 1rem 0 1rem;
+    font-size: 1rem;
+}
+
+.table-eva .foot-desc img {
+    height: 50px;
+}
+
+.table-eva .desc img {
+    width: 80%;
+}
+
+.modal-container .close {
+    width: 100%;
+    height: 1rem;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 1rem;
+    font-size: 3rem;
+    display: flex;
+}
+
+.close span {
+    transition: color 300ms;
+    color: black;
+    cursor: pointer;
+}
+
+.close span:hover {
+    cursor: pointer;
+    color: red;
+}
+
+@media only screen and (max-width: 750px) {
+    .modal-container {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0;
+        overflow-y: auto;
+        padding-top: 1rem;
+    }
+    .modal .title {
+        font-size: 1.5rem;
+    }
+    .table-eva .icon {
+        display: none;
+    }
+    .table-eva .desc {
+        display: none;
+    }
+    .table-eva .foot-desc div {
+        display: flex;
+    }
+}
